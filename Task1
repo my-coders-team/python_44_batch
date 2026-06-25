@@ -1,1 +1,147 @@
+📲 WhatsApp Status System Challenge
 
+🎯 Objective
+
+Design and develop a mini WhatsApp Status System using Python.
+
+The goal of this challenge is not only to write code but also to think like a Software Engineer and understand how real-world applications work.
+============================================================================================================
+
+📌 Problem Statement
+
+WhatsApp allows users to upload statuses that remain visible for 24 hours.
+
+Your task is to build a simplified version of the WhatsApp Status feature.
+
+The system should allow users to:
+
+✅ Upload a status
+
+✅ View available statuses
+
+✅ Track how many times a status has been viewed
+
+✅ Automatically remove statuses after 24 hours
+===========================================================================================================================
+
+🚀 Functional Requirements
+1. Upload Status
+
+A user should be able to upload a status.
+
+Example:
+
+User: Ram
+Status: Learning Python at LinkCode Technologies
+
+Store the following information:
+
+Username
+Status Message
+Upload Time
+View Count
+2. View Status
+
+A friend should be able to view available statuses.
+
+Example:
+
+Available Statuses
+
+Rahul
+Priya
+Amit
+
+When a status is opened:
+
+Display the status message
+Increase the view count
+3. Status Expiry
+
+Statuses should disappear automatically after 24 hours.
+
+Example:
+
+Upload Time : 25 June 2026 10:00 AM
+
+Current Time : 26 June 2026 11:00 AM
+
+Status Expired
+4. View Analytics
+
+The user should be able to check:
+
+Status Message
+Total Views
+Upload Time
+
+===================================================================================================================
+ Application Flow
+
+Example:
+
+Upload Status
+        ↓
+Store Data
+        ↓
+View Status
+        ↓
+Increase View Count
+        ↓
+Check Expiry
+        ↓
+Delete Expired Status
+===============================================================================================================================
+create one readme & add -?
+
+Logic Explanation
+
+#Explain each function:
+
+Upload Status
+View Status
+Delete Expired Status
+View Analytics
+
+#Concepts Learned
+
+Example:
+
+✔ Dictionaries
+✔ Functions
+✔ Loops
+✔ DateTime Module
+✔ Menu Driven Programming
+✔ Real World System Design
+6. Future Improvements
+
+#Mention at least 5 improvements.
+
+Examples:
+
+Multiple statuses per user
+Store image/video status
+Store viewers list
+Unique view count
+Login system
+Database integration
+File handling
+GUI using Tkinter
+Web version using Flask/Django
+
+=================================================================================================================================
+💡 Important Note
+
+Do not search for ready-made solutions.
+
+Think first.
+
+Design the data structure.
+
+Create the logic.
+
+Then start coding.
+
+The objective is to learn how real-world applications are designed and implemented by software engineers.
+
+🚀 Happy Coding!
