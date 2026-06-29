@@ -57,22 +57,4 @@ while True:
             
 
 
-#hw 
-#class product
-#       name,brand,mfg,exp,qty,price
-# operations - !) all detailes 
-#              2)search
-#                       1)brand
-#                       2)name
-#                       3)price
-#  acording to brand name ex"suhaha" show all suhana products 
 
-#purchase -->generate bill 
-#then after bill generation qty will automatically get updated
-
-
-
-
-#hw 
-#try to download the bill with .pdf extension
-#send the bill pdf to user email
