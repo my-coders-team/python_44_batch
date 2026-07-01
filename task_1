@@ -1,0 +1,64 @@
+from datetime import datetime, timedelta
+statuses = {}
+def upload_status():
+    username=input("Enter Username:")
+    message=input("Enter Status:")
+    statuses[username]={
+        "message":message,
+        "upload_time":datetime.now(),
+        "views":0
+    }
+    print("Status Uploaded Successfully!")
+def delete_expired_status():
+    current_time=datetime.now()
+    expired_users=[]
+    for user in statuses:
+        upload_time=statuses[user]["upload_time"]
+        if current_time - upload_time >= timedelta(hours=24):
+            expired_users.append(user)
+    for user in expired_users:
+        del statuses[user]
+def view_status():
+    delete_expired_status()
+    if len(statuses)==0:
+        print("No Status Available.")
+        return
+    print("\nAvailable Statuses:")
+    for user in statuses:
+        print("-", user)
+    name = input("\nEnter username to view status: ")
+    if name in statuses:
+        print("\nStatus :", statuses[name]["message"])
+        statuses[name]["views"] += 1
+        print("Viewed Successfully.")
+    else:
+        print("User Not Found.")
+def view_analytics():
+    delete_expired_status()
+    if len(statuses) == 0:
+        print("No Status Found.")
+        return
+    for user, data in statuses.items():
+        print("\n--------------------------")
+        print("Username :",user)
+        print("Status   :",data["message"])
+        print("Views    :",data["views"])
+        print("Uploaded :",data["upload_time"].strftime("%d-%m-%Y %I:%M %p"))
+while True:
+    print("\n===== WhatsApp Status System =====")
+    print("1.Upload Status")
+    print("2.View Status")
+    print("3.View Analytics")
+    print("4.Exit")
+    choice=input("Enter Choice: ")
+    if choice=="1":
+        upload_status()
+    elif choice=="2":
+        view_status()
+    elif choice=="3":
+        view_analytics()
+    elif choice=="4":
+        print("Thank You!")
+        break
+    else:
+        print("Invalid Choice")
